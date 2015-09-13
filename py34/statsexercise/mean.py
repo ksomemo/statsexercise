@@ -5,9 +5,10 @@ def mean(xs):
 
 def median(xs):
     """中央値"""
-    l = len(xs)
+    sorted_xs = sorted(xs)
+    l = len(sorted_xs)
     r = l % 2
     q = l // 2
     if r == 1:
-        return xs[q]
-    return mean([xs[q - 1], xs[q]])
+        return sorted_xs[q]
+    return mean([sorted_xs[q - 1], sorted_xs[q]])
