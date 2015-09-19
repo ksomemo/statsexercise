@@ -1,3 +1,6 @@
+from statsexercise.util import product
+
+
 def mean(xs):
     """算術平均"""
     return sum(xs) / len(xs)
@@ -16,3 +19,8 @@ def median(xs):
 def harmonic_mean(xs):
     """調和平均"""
     return len(xs) / sum(1/x for x in xs)
+
+
+def geometric_mean(xs):
+    """幾何平均"""
+    return product(xs) ** (1 / len(xs))

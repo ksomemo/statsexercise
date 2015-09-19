@@ -22,3 +22,7 @@ def test_median(xs, expected):
 
 def test_harmonic_mean():
     assert mean.harmonic_mean([1, 2, 4]) == 12 / 7
+
+
+def test_geometric_mean():
+    assert mean.geometric_mean([1, 2, 4]) == 2
