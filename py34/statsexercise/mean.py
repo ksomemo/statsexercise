@@ -12,3 +12,7 @@ def median(xs):
     if r == 1:
         return sorted_xs[q]
     return mean([sorted_xs[q - 1], sorted_xs[q]])
+
+def harmonic_mean(xs):
+    """調和平均"""
+    return len(xs) / sum(1/x for x in xs)

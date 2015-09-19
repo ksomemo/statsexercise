@@ -18,3 +18,7 @@ def test_mean(xs, expected):
 ])
 def test_median(xs, expected):
     assert mean.median(xs) == expected
+
+
+def test_harmonic_mean():
+    assert mean.harmonic_mean([1, 2, 4]) == 12 / 7
