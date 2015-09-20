@@ -11,14 +11,11 @@ def ssd(xs):
     return sum(map(lambda x: (x - avg) ** 2, xs))
 
 
-def variance(xs):
-    """分散"""
+def pvariance(xs):
+    """母集団の分散"""
     return ssd(xs) / len(xs)
 
 
-def sd(xs):
-    """標準偏差
-
-    standard deviation
-    """
-    return math.sqrt(variance(xs))
+def pstdev(xs):
+    """母集団の標準偏差"""
+    return math.sqrt(pvariance(xs))

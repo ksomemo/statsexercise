@@ -1,3 +1,4 @@
+import math
 from statsexercise import variability
 
 
@@ -6,12 +7,11 @@ def test_ssd():
     assert variability.ssd(xs) == 8
 
 
-def test_variance():
+def test_pvariance():
     xs = [2, 4, 6]
-    assert variability.variance(xs) == 8/3
+    assert variability.pvariance(xs) == 8/3
 
 
-def test_sd():
-    import math
+def test_pstdev():
     xs = [2, 4, 6]
-    assert variability.sd(xs) == math.sqrt(8/3)
+    assert variability.pstdev(xs) == math.sqrt(8/3)
