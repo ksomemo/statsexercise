@@ -1,4 +1,5 @@
 import pytest
+import statistics as stats
 from statsexercise import mean
 
 
@@ -8,6 +9,7 @@ from statsexercise import mean
 ])
 def test_mean(xs, expected):
     assert mean.mean(xs) == expected
+    assert mean.mean(xs) == stats.mean(xs)
 
 
 @pytest.mark.parametrize('xs, expected', [
@@ -18,6 +20,7 @@ def test_mean(xs, expected):
 ])
 def test_median(xs, expected):
     assert mean.median(xs) == expected
+    assert mean.median(xs) == stats.median(xs)
 
 
 def test_harmonic_mean():
