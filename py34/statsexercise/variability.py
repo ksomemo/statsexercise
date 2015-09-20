@@ -19,3 +19,13 @@ def pvariance(xs):
 def pstdev(xs):
     """母集団の標準偏差"""
     return math.sqrt(pvariance(xs))
+
+
+def variance(xs):
+    """分散"""
+    return ssd(xs) / (len(xs) - 1)
+
+
+def stdev(xs):
+    """標準偏差"""
+    return math.sqrt(variance(xs))
