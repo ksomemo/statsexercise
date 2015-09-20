@@ -29,3 +29,7 @@ def test_harmonic_mean():
 
 def test_geometric_mean():
     assert mean.geometric_mean([1, 2, 4]) == 2
+
+
+def test_mode():
+    assert mean.mode([1, 1, 2, 2, 2]) == 2

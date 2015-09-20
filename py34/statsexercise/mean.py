@@ -1,3 +1,4 @@
+from collections import Counter
 from statsexercise.util import product
 
 
@@ -24,3 +25,8 @@ def harmonic_mean(xs):
 def geometric_mean(xs):
     """幾何平均"""
     return product(xs) ** (1 / len(xs))
+
+
+def mode(xs):
+    """最頻値"""
+    return Counter(xs).most_common()[0][0]
